@@ -6,9 +6,7 @@ Resources from my talk at macad.uk named **"Silicon Sandbox: Mastering Mac virtu
 
 ## Overview
 
-A collection of scripts, templates, and resources for automating Mac virtualization and Jamf integration.
-
-![macad.uk2025](img/logo.png)
+A collection of scripts, templates, and resources for automating macOS virtualization for macadmins with Jamf.
 
 ## License
 
