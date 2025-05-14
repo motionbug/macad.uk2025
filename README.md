@@ -1,6 +1,6 @@
 # Silicon Sandbox: Mastering Mac virtualisation for Jamf workflows - macad.uk2025
 
-![macad.uk2025](https://macad.uk2025/assets/hero.png)
+![macad.uk2025](img/logo.png)
 ![appletart](img/slide.png)
 
 Resources from my talk at macad.uk named **"Silicon Sandbox: Mastering Mac virtualisation for Jamf workflows"**.
