@@ -117,7 +117,7 @@ source "tart-cli" "tart" {
     # first entry in a list of "english"-prefixed items, which will be "English".
     #
     # [1]: should be named "English (US)", but oh well 🤷
-    "<wait30s>italiano<esc>english<enter>",
+    "<wait30s>italiano<sleep10s>english<enter>",
     # Select Your Country or Region
     "<wait60s>united states<leftShiftOn><tab><leftShiftOff><spacebar>",
     # Transfer Your Data to This Mac
