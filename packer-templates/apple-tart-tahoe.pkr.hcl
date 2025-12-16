@@ -107,7 +107,7 @@ source "tart-cli" "tart" {
   ssh_username = "${var.account_userName}"
   ssh_password = "${var.account_password}"
   ssh_timeout  = "180s"
-  boot_command = [
+    boot_command = [
     # hello, hola, bonjour, etc.
     "<wait60s><spacebar>",
     # Language: most of the times we have a list of "English"[1], "English (UK)", etc. with
@@ -186,19 +186,23 @@ source "tart-cli" "tart" {
     # On Tahoe opening System Settings through Spotlight is not very reliable, sometimes opens System information
     "<wait10s>open '/System/Applications/System Settings.app'<enter>",
     "<wait10s><leftCtrlOn><f2><leftCtrlOff><right><right><right><down>Privacy & Security<enter>",
-    "<wait10s><leftShiftOn><tab><tab><tab><tab><tab><leftShiftOff>",
+    "<wait10s><leftShiftOn><tab><tab><tab><tab><tab><tab><leftShiftOff>",
     "<wait10s><down><wait1s><down><wait1s><enter>",
     "<wait10s>${var.account_password}<enter>",
     "<wait10s><leftShiftOn><tab><leftShiftOff><wait1s><spacebar>",
     # Quit System Settings
     "<wait10s><leftAltOn>q<leftAltOff>",
   ]
-
+  
   run_extra_args = [
     "--no-audio"
   ]
 
-  create_grace_time  = "30s"
+  // A (hopefully) temporary workaround for Virtualization.Framework's
+  // installation process not fully finishing in a timely manner
+  create_grace_time = "30s"
+
+  // Keep the recovery partition, otherwise it's not possible to "softwareupdate"
   recovery_partition = "keep"
 }
 
