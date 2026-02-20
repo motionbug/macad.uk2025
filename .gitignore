@@ -8,3 +8,4 @@
 packer_cache/
 crash.log
 *.pkrvars.hcl
+packer-templates/upload.sh
